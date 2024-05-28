@@ -1,13 +1,4 @@
-﻿// факториал числа
- // int Factorial(int n)
-// {
-// 	if(n == 1) return 1;
-// 	return n * Factorial(n - 1);
-// }
-
-// Console.WriteLine(Factorial(5)); // 120
-
-// Напишите программу, которая будет принимать на
+﻿// Напишите программу, которая будет принимать на
 // вход число и возвращать сумму его цифр.
 // Указание
 // Использовать рекурсию.
@@ -15,11 +6,26 @@
 // 123 => 6
 // 63 => 9
 
-int SumDigits(int num) // 123, 12, 1, 0
+int SumDigits(int num) // вводим возвратную функцию (изменения num 123, 12, 1, 0)
 {
-    if (num == 0) return 0; // 
-    return num % 10 + SumDigits(num / 10); //123, 12, 1
+    if (num == 0) return 0; // если num = 0 то возвращаем 0
+    return num % 10 + SumDigits(num / 10); // иначе возвращаем следующие действия: вначале идет выполнение рекурсии,а затем num % 10  
     // 1 % 10 => 1 + 12 % 10 => 2 + 123 % 10 => 3  =  1+2+3 = 6+0
 }
+Console.WriteLine("Введите натуральное число: ");
+int number = Convert.ToInt32(Console.ReadLine()); 
 
-Console.WriteLine(SumDigits(128573));
+Console.WriteLine(SumDigits(number)); //вызываем локальную функцию и задаем число
+
+
+
+//факториал числа
+ int Factorial(int n) // вводим возвратную  локальную функцию факториала
+{
+	if(n == 1) return 1; // если число = 1 возвращаем 1
+	return n * Factorial(n - 1); //иначе  возвращаем данное выражение
+}
+Console.WriteLine("Введите натуральное число: ");
+int figure = Convert.ToInt32(Console.ReadLine()); 
+
+Console.WriteLine(Factorial(figure)); // вызываем функцию и вводим число
