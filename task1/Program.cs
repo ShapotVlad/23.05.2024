@@ -7,14 +7,14 @@
 
 
 
-void PrintNaturalNumbers(int num) 
+void PrintNaturalNumbers(int num)  //вводим локальную функцию  
 {
     if(num == 0) return;
-    PrintNaturalNumbers(num - 1);
+    PrintNaturalNumbers(num - 1); // локальная функция  внутри  себя(рекурсия)
     Console.Write($"{num} ");
 }
 
 Console.WriteLine("Введите натуральное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine()); //задаём number  в функцию
 
-PrintNaturalNumbers(number);
+PrintNaturalNumbers(number);  //вызов локальной функции
