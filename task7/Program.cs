@@ -1,7 +1,7 @@
 ﻿// //метод бинарного поиска с использованием цикла
 
 
-int BinarySearch(int[] array, int searchedValue, int left, int right)
+int BinarySearch(int[] array, int searchedValue, int left, int right)//создали функцию бинарного поиска
 {
     //пока не сошлись границы массива
     while (left <= right)
@@ -28,9 +28,9 @@ int BinarySearch(int[] array, int searchedValue, int left, int right)
     return -1;
 }
 
-int[] arr = { 9, 8, 12, 5, 13, 4, 7 };//создали переменный цельный массив arr
+int[] arr = { 1, 3, 5, 7, 9, 11, 13};//создали переменный цельный массив arr ОТСОРТИРОВАННЫЙ
 
-int result = BinarySearch(arr, 9, 0, 6);         //вызов функции и вывод числа на  консоль  
+int result = BinarySearch(arr, 13, 0, 6);         //вызов функции  бинарного поиска и вывод числа на  консоль  
 Console.WriteLine($" => {result}");
 
 
